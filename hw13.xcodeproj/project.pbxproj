@@ -14,6 +14,11 @@
 		91D722D2288BE6BD007EF66B /* hw13.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91D722D0288BE6BD007EF66B /* hw13.xcdatamodeld */; };
 		91D722D4288BE6BE007EF66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91D722D3288BE6BE007EF66B /* Assets.xcassets */; };
 		91D722D7288BE6BE007EF66B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91D722D5288BE6BE007EF66B /* LaunchScreen.storyboard */; };
+		91D722DF288EF376007EF66B /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D722DE288EF376007EF66B /* SettingTableViewCell.swift */; };
+		91D7AD32289292C300F92173 /* bluetoothIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D7AD31289292C300F92173 /* bluetoothIconWhite.png */; };
+		91D7AD38289294F100F92173 /* vpnIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D7AD37289294F100F92173 /* vpnIcon.png */; };
+		91D7AD3C289296AC00F92173 /* homeScreenIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D7AD3B289296AC00F92173 /* homeScreenIcon.png */; };
+		91EA956A28902E5C004E5306 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA956928902E5C004E5306 /* SwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		91D722D3288BE6BE007EF66B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91D722D6288BE6BE007EF66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91D722D8288BE6BE007EF66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D722DE288EF376007EF66B /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		91D7AD31289292C300F92173 /* bluetoothIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluetoothIconWhite.png; sourceTree = "<group>"; };
+		91D7AD37289294F100F92173 /* vpnIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vpnIcon.png; sourceTree = "<group>"; };
+		91D7AD3B289296AC00F92173 /* homeScreenIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeScreenIcon.png; sourceTree = "<group>"; };
+		91EA956928902E5C004E5306 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,61 @@
 		91D722C6288BE6BD007EF66B /* hw13 */ = {
 			isa = PBXGroup;
 			children = (
+				91D7AD3E289298E700F92173 /* Resources */,
+				91D7AD3D289298CB00F92173 /* Sources */,
+			);
+			path = hw13;
+			sourceTree = "<group>";
+		};
+		91D7AD302892924400F92173 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				91D7AD31289292C300F92173 /* bluetoothIconWhite.png */,
+				91D7AD37289294F100F92173 /* vpnIcon.png */,
+				91D7AD3B289296AC00F92173 /* homeScreenIcon.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		91D7AD3D289298CB00F92173 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
 				91D722C7288BE6BD007EF66B /* AppDelegate.swift */,
 				91D722C9288BE6BD007EF66B /* SceneDelegate.swift */,
 				91D722CB288BE6BD007EF66B /* ViewController.swift */,
-				91D722CD288BE6BD007EF66B /* Main.storyboard */,
+				91D722DE288EF376007EF66B /* SettingTableViewCell.swift */,
+				91EA956928902E5C004E5306 /* SwitchTableViewCell.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		91D7AD3E289298E700F92173 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91D7AD402892992600F92173 /* Storyboards */,
+				91D7AD302892924400F92173 /* Icons */,
+				91D7AD3F2892990100F92173 /* Configs */,
 				91D722D3288BE6BE007EF66B /* Assets.xcassets */,
-				91D722D5288BE6BE007EF66B /* LaunchScreen.storyboard */,
-				91D722D8288BE6BE007EF66B /* Info.plist */,
 				91D722D0288BE6BD007EF66B /* hw13.xcdatamodeld */,
 			);
-			path = hw13;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		91D7AD3F2892990100F92173 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				91D722D8288BE6BE007EF66B /* Info.plist */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		91D7AD402892992600F92173 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				91D722CD288BE6BD007EF66B /* Main.storyboard */,
+				91D722D5288BE6BE007EF66B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +185,10 @@
 			files = (
 				91D722D7288BE6BE007EF66B /* LaunchScreen.storyboard in Resources */,
 				91D722D4288BE6BE007EF66B /* Assets.xcassets in Resources */,
+				91D7AD38289294F100F92173 /* vpnIcon.png in Resources */,
+				91D7AD3C289296AC00F92173 /* homeScreenIcon.png in Resources */,
 				91D722CF288BE6BD007EF66B /* Main.storyboard in Resources */,
+				91D7AD32289292C300F92173 /* bluetoothIconWhite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +200,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				91D722D2288BE6BD007EF66B /* hw13.xcdatamodeld in Sources */,
+				91D722DF288EF376007EF66B /* SettingTableViewCell.swift in Sources */,
 				91D722CC288BE6BD007EF66B /* ViewController.swift in Sources */,
 				91D722C8288BE6BD007EF66B /* AppDelegate.swift in Sources */,
 				91D722CA288BE6BD007EF66B /* SceneDelegate.swift in Sources */,
+				91EA956A28902E5C004E5306 /* SwitchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +352,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = hw13/Info.plist;
+				INFOPLIST_FILE = hw13/Resources/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -307,7 +368,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,10 +380,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = hw13/Info.plist;
+				INFOPLIST_FILE = hw13/Resources/Configs/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +396,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

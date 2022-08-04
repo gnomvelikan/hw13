@@ -10,9 +10,9 @@ import UIKit
 class SettingTableViewCell: UITableViewCell {
     
     // MARK: - variables
+    static let identifier: String  = "SettingTableViewCell"
     
-    static let identifier = "SettingTableViewCell"
-    private let iconContainer: UIView = {
+    let iconContainer: UIView = {
         let view = UIView()
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
@@ -20,14 +20,14 @@ class SettingTableViewCell: UITableViewCell {
         return view
     }()
     
-    private let iconImageView: UIImageView = {
+    let iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.tintColor = .white
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
-    private let label: UILabel = {
+    let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
         return label
@@ -35,9 +35,13 @@ class SettingTableViewCell: UITableViewCell {
     
     
     // MARK: - functions
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addLabelsAndIcons()
+    }
+    
+    
+    func addLabelsAndIcons() {
         contentView.addSubview(label)
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(iconImageView)
@@ -45,6 +49,7 @@ class SettingTableViewCell: UITableViewCell {
         contentView.clipsToBounds = true
         accessoryType = .disclosureIndicator
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError()
@@ -64,12 +69,6 @@ class SettingTableViewCell: UITableViewCell {
                              height: contentView.frame.size.height)
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        iconImageView.image = nil
-        label.text = nil
-        iconContainer.backgroundColor = nil
-    }
     
     public func configure(with model: SettingsOption) {
         label.text = model.title

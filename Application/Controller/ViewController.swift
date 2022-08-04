@@ -7,30 +7,6 @@
 
 import UIKit
 
-struct Section {
-    let options: [SettingsOptionType]
-}
-
-enum SettingsOptionType {
-    case staticCell(model: SettingsOption)
-    case switchCell(model: SettingsSwitchOption)
-}
-
-struct SettingsSwitchOption {
-    let title: String
-    let icon: UIImage?
-    let iconBackgroundColor: UIColor
-    let handler: (() -> Void)
-    var isOn: Bool
-}
-
-struct SettingsOption {
-    let title: String
-    let icon: UIImage?
-    let iconBackgroundColor: UIColor
-    let handler: (() -> Void)
-}
-
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Variables
@@ -58,10 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // MARK: Functions
-    
-    
     func configure() {
-        
         models.append(Section(options: [
             .switchCell(model: SettingsSwitchOption(title: "Авиарежим", icon: UIImage(systemName: "airplane"), iconBackgroundColor: .systemOrange, handler: {
             }, isOn: false)),

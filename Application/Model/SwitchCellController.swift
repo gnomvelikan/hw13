@@ -10,7 +10,6 @@ import UIKit
 class SwitchTableViewCell: UITableViewCell {
     
     // MARK: - variables
-    
     static let identifier = "SwitchTableViewCell"
     
     private let iconContainer: UIView = {
@@ -41,9 +40,12 @@ class SwitchTableViewCell: UITableViewCell {
     }()
     
     // MARK: - functions
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addLabelsAndIcons()
+    }
+    
+    func addLabelsAndIcons() {
         contentView.addSubview(label)
         contentView.addSubview(iconContainer)
         contentView.addSubview(mySwitch)
@@ -78,14 +80,6 @@ class SwitchTableViewCell: UITableViewCell {
             y: 0,
             width: contentView.frame.size.width - 20 - iconContainer.frame.size.width,
             height: contentView.frame.size.height)
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        iconImageView.image = nil
-        label.text = nil
-        iconContainer.backgroundColor = nil
-        mySwitch.isOn = false
     }
     
     public func configure(with model: SettingsSwitchOption) {
